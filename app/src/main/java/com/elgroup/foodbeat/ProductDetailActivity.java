@@ -27,7 +27,7 @@ public class ProductDetailActivity extends BaseActivity {
     private CustomViewPager itemImageViewPager;
     private CirclePageIndicator circleIndicator;
 
-    //TextView txtNameToolbar = null;
+    /*TextView txtNameToolbar = null;*/
 
     @SuppressWarnings("deprecation")
     @Override
