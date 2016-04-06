@@ -47,7 +47,7 @@ public class ProductDetailActivity extends BaseActivity {
     }
 
     private void InitViews() {
-        ConfigureToolbar("STRAWBERRY", "$15");
+        ConfigToolbar("STRAWBERRY", "$15");
         itemImageViewPager = (CustomViewPager) findViewById(R.id.itemImageViewPager);
         circleIndicator = (CirclePageIndicator) findViewById(R.id.circleIndicator);
         circleIndicator.setOrientation(LinearLayout.HORIZONTAL);
@@ -56,7 +56,7 @@ public class ProductDetailActivity extends BaseActivity {
     }
 
 
-    private void ConfigureToolbar(String text, String price) {
+    private void ConfigToolbar(String text, String price) {
         app_bar_layout = (AppBarLayout) findViewById(R.id.app_bar_layout);
         collapsing_toolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsing_toolbar.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
