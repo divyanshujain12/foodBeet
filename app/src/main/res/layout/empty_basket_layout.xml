@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/basket_icon" />
+
+    <com.neopixl.pixlui.components.textview.TextView
+        android:id="@+id/txtLoadingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/center_green_circle"
+        android:paddingBottom="@dimen/fifteen_dp"
+        android:paddingLeft="@dimen/twenty_dp"
+        android:paddingRight="@dimen/twenty_dp"
+        android:paddingTop="@dimen/fifteen_dp"
+        android:text="@string/keep_shopping"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/twenty_four_sp"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:layout_centerHorizontal="true"
+        pixlui:typeface="OpenSans-Bold.ttf" />
+</RelativeLayout>

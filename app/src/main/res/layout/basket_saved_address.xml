@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    android:orientation="vertical">
+
+    <com.neopixl.pixlui.components.textview.TextView
+        android:id="@+id/txtSelectAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five_dp"
+        android:maxLines="2"
+        android:padding="@dimen/ten_dp"
+        android:text="@string/select_shipping_address"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sixteen_sp"
+        pixlui:typeface="Roboto-Regular.ttf" />
+
+    <LinearLayout
+        android:id="@+id/addressLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/fifteen_dp"
+        android:visibility="gone">
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtNoAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="@dimen/ten_dp"
+            android:text="@string/no_saved_shipping_address"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="Roboto-Regular.ttf" />
+
+        <LinearLayout
+            android:id="@+id/savedAddressLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:orientation="horizontal">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:id="@+id/txtShippingAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:maxLines="2"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/no_saved_shipping_address"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sixteen_sp"
+                pixlui:typeface="Roboto-Regular.ttf" />
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:id="@+id/txtEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/green_circle_without_border"
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sixteen_sp"
+                pixlui:typeface="Roboto-Regular.ttf" />
+        </LinearLayout>
+
+        <com.neopixl.pixlui.components.edittext.EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:background="@drawable/green_border_circle"
+            android:gravity="center"
+            android:hint="@string/add_address"
+            android:maxLines="2"
+            android:padding="@dimen/ten_dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="Roboto-Regular.ttf" />
+    </LinearLayout>
+</LinearLayout>

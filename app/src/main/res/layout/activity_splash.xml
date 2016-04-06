@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/twenty_dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/ActionLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seventy_dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="Login"
+            android:padding="@dimen/twenty_dp"
+            android:text="@string/login"
+            android:textColor="@color/header"
+            android:textSize="@dimen/eighteen_sp"
+            pixlui:typeface="OpenSans-Regular.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtSignup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seventy_dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="Signup"
+            android:padding="@dimen/twenty_dp"
+            android:text="@string/signup"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eighteen_sp"
+            pixlui:typeface="OpenSans-Regular.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtSkip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/seventy_dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="Skip"
+            android:padding="@dimen/twenty_dp"
+            android:text="@string/skip"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eighteen_sp"
+            pixlui:typeface="OpenSans-Regular.ttf" />
+    </LinearLayout>
+</RelativeLayout>

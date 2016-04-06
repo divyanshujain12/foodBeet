@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal"
+    android:padding="@dimen/eight_dp">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_weight="1.5"
+        android:paddingBottom="@dimen/five_dp"
+        android:paddingRight="@dimen/five_dp"
+        android:paddingTop="@dimen/five_dp"
+        android:src="@drawable/back" />
+
+    <com.neopixl.pixlui.components.edittext.EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_weight="7"
+        android:background="@drawable/white_filled_background"
+        android:ems="12"
+        android:gravity="center"
+        android:hint="@string/search"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="@dimen/eighteen_sp"
+        android:visibility="visible"
+        pixlui:typeface="Roboto-Regular.ttf" />
+
+    <ImageView
+        android:id="@+id/searchIV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_toRightOf="@+id/edtSearch"
+        android:layout_weight="1.5"
+
+        android:src="@drawable/search" />
+</LinearLayout>

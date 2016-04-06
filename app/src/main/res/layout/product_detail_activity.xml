@@ -1,0 +1,168 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleTextAppearance="@android:color/white"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom|start|center_vertical"
+            app:expandedTitleMarginBottom="@dimen/fifteen_dp"
+            app:expandedTitleMarginStart="@dimen/fifteen_dp"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.elgroup.foodbeat.CustomViews.CustomViewPager
+                    android:id="@+id/itemImageViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/circleIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/bottomStrip"
+                    android:padding="@dimen/five_dp"
+                    app:fillColor="@android:color/white"
+                    app:pageColor="@android:color/transparent"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp" />
+
+                <LinearLayout
+                    android:id="@+id/bottomStrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#55000000"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/thirty_dp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:elevation="8dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/ten_dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.elgroup.foodbeat.Utils.RoundedImageView
+                    android:id="@+id/sellerImage"
+                    android:layout_width="@dimen/one_hundred_dp"
+                    android:layout_height="@dimen/one_hundred_dp"
+                    android:src="@drawable/default_image"
+                    app:riv_border_color="@color/colorPrimary"
+                    app:riv_corner_radius="30dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_toRightOf="@+id/sellerImage"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.neopixl.pixlui.components.textview.TextView
+                        android:id="@+id/txtSellerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Frank's Farm"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/eighteen_sp"
+                        android:visibility="visible"
+                        pixlui:typeface="OpenSans-Bold.ttf" />
+
+                    <com.neopixl.pixlui.components.textview.TextView
+                        android:id="@+id/txtLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Texas"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sixteen_sp"
+                        android:visibility="visible"
+                        pixlui:typeface="Roboto-Regular.ttf" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/envelope" />
+            </RelativeLayout>
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:text="INFO"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sixteen_sp"
+                android:visibility="visible"
+                pixlui:typeface="OpenSans-Bold.ttf" />
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:text="Lorem ipsum doller sit amet."
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fourteen_sp"
+                android:visibility="visible"
+                pixlui:typeface="Roboto-Thin.ttf" />
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:text="Delivery Options"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sixteen_sp"
+                android:visibility="visible"
+                pixlui:typeface="OpenSans-Bold.ttf" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

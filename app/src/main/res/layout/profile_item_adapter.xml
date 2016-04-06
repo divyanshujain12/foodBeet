@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/two_hundred_fifty_dp"
+    android:layout_marginBottom="16dp"
+    card_view:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.5">
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:src="@drawable/strawbery" />
+            <ImageView
+                android:src="@drawable/rounded_corners"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <com.elgroup.foodbeat.CustomDialog.NewtonCradleLoading
+                android:id="@+id/loadingView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:padding="@dimen/five_dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.neopixl.pixlui.components.textview.TextView
+                    android:id="@+id/txtProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Product"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fourteen_sp"
+                    pixlui:typeface="Roboto-Regular.ttf" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.neopixl.pixlui.components.textview.TextView
+                        android:id="@+id/txtProductNewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="$19"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/twelve_sp"
+                        pixlui:typeface="OpenSans-Bold.ttf" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/fourty_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp">
+
+                        <com.neopixl.pixlui.components.textview.TextView
+                            android:id="@+id/txtProductOldPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="$19"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/twelve_sp"
+                            pixlui:typeface="Roboto-Regular.ttf" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.elgroup.foodbeat.Utils.RoundedImageView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/fourty_dp"
+                android:layout_height="@dimen/fourty_dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/five_dp"
+                android:src="@drawable/avatar" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

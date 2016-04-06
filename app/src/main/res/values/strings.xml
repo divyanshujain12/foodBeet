@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Foodbeat</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_empty">Cant Left Blank!</string>
+    <string name="err_msg_password">Enter the password</string>
+
+    <string name="err_wrong_pass">You have entered wrong old password!</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="skip">Skip</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="continue_text">Continue</string>
+    <string name="home">Home</string>
+    <string name="daily_sales">Daily Sales</string>
+    <string name="recent">Recent</string>
+
+    <string name="item">Items</string>
+    <string name="feedback">Feedback</string>
+    <string name="pictures">Pictures</string>
+    <string name="about">About</string>
+    <string name="title_activity_vendors_location_map">Map</string>
+    <string name="search">Search</string>
+    <string name="vendors_around_you">Vendors around you</string>
+    <string name="keep_shopping">KEEP SHOPPING</string>
+    <string name="profile">PROFILE</string>
+    <string name="shopping_cart">SHOPPING CART</string>
+    <string name="basket">BASKET</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="saved_credit_cards">Saved Credit Cards</string>
+    <string name="add_new_card">ADD NEW CARD</string>
+    <string name="other_payment_methods">Other Payment Methods</string>
+    <string name="pay_with_paypal">Pay with PayPal</string>
+    <string name="pay_with_paytm">Pay with Paytm</string>
+    <string name="pay_with_master_pass">Pay with MasterPass</string>
+    <string name="select_shipping_address">Select Shipping Address</string>
+    <string name="no_saved_shipping_address">No Saved Shipping Address</string>
+    <string name="add_address">Add Shipping Address</string>
+    <string name="have_a_promo_code">Have a promo code or gift card?</string>
+    <string name="apply">APPLY</string>
+    <string name="edit">Edit</string>
+
+
+    <!--Dummy Data-->
+    <string name="pic1">http://www.desibucket.com/db2/01/15735/15735.jpg</string>
+    <string name="pic2">http://www.desibucket.com/db2/01/15739/15739.jpg</string>
+    <string name="pic3">http://www.desibucket.com/db/02/27491/27491.jpg</string>
+    <string name="pic4">http://www.desibucket.com/db2/01/15725/15725.jpg</string>
+    <string name="pic5">http://www.desibucket.com/db2/01/15719/15719.jpg</string>
+    <string name="pic6">http://www.desibucket.com/db2/01/15693/15693.jpg</string>
+
+</resources>

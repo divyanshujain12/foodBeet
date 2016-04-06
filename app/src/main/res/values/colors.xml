@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4B9C15</color>
+    <color name="colorPrimaryDark">#4B9C15</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="header">#58AF1E</color>
+    <color name="white_with_alpha">#99ffffff</color>
+    <color name="primary_color_with_alpha">#444B9C15</color>
+    <color name="light_yellow">#F5FFEE</color>
+</resources>

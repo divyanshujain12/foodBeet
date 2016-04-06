@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/red_background">
+
+    <com.elgroup.foodbeat.CustomViews.CustomViewPager
+        android:id="@+id/itemImageViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two_hundred_fifty_dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|center_vertical"
+        android:background="@drawable/home_item_bottom"
+        android:orientation="vertical">
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/thirty_dp"
+            android:singleLine="true"
+            android:text="@string/continue_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/eighteen_sp"
+            pixlui:typeface="OpenSans-Bold.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="OpenSans-Bold.ttf" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/circleIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            app:fillColor="@android:color/white"
+            app:pageColor="@android:color/transparent"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+</RelativeLayout>

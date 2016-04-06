@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    android:orientation="vertical">
+
+    <com.neopixl.pixlui.components.textview.TextView
+        android:id="@+id/txtPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five_dp"
+        android:maxLines="2"
+        android:padding="@dimen/ten_dp"
+        android:text="@string/select_payment_method"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sixteen_sp"
+        pixlui:typeface="Roboto-Regular.ttf" />
+
+    <LinearLayout
+        android:id="@+id/paymentMethodsLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/savedCardsLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/saved_credit_cards"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sixteen_sp"
+                pixlui:typeface="Roboto-Regular.ttf" />
+
+            <LinearLayout
+                android:id="@+id/cardsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtAddCards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:background="@drawable/center_green_circle"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/fifteen_dp"
+            android:paddingLeft="@dimen/twenty_dp"
+            android:paddingRight="@dimen/twenty_dp"
+            android:paddingTop="@dimen/fifteen_dp"
+            android:text="@string/add_new_card"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="Roboto-Regular.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="@dimen/ten_dp"
+            android:text="@string/other_payment_methods"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="Roboto-Regular.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtPayPal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:maxLines="2"
+            android:padding="@dimen/ten_dp"
+            android:text="@string/pay_with_paypal"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="OpenSans-Bold.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtPaytm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:maxLines="2"
+            android:padding="@dimen/ten_dp"
+            android:text="@string/pay_with_paytm"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="OpenSans-Bold.ttf" />
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:id="@+id/txtPayMasterPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:maxLines="2"
+            android:padding="@dimen/ten_dp"
+            android:text="@string/pay_with_master_pass"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sixteen_sp"
+            pixlui:typeface="OpenSans-Bold.ttf" />
+
+    </LinearLayout>
+</LinearLayout>
