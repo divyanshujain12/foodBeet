@@ -35,10 +35,6 @@ public class ProductDetailActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT)
-            setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_detail_activity);
 
@@ -61,7 +57,7 @@ public class ProductDetailActivity extends BaseActivity {
         collapsing_toolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsing_toolbar.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
         collapsing_toolbar.setCollapsedTitleTextAppearance(R.style.CollapsedAppBar);
-        collapsing_toolbar.setTitle(text + "        " + price);
+        collapsing_toolbar.setTitle(text + "           " + price);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

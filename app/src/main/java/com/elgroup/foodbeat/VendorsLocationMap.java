@@ -40,10 +40,6 @@ public class VendorsLocationMap extends BaseActivity implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT)
-            setTheme(R.style.AppTheme_NoActionBar);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         setContentView(R.layout.activity_vendors_location_map);
         InitView();

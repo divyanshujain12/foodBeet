@@ -23,11 +23,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       /* getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+//        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT)
-            setTheme(R.style.AppTheme_NoActionBar);*/
+            setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         cdr = new ConnectionDetector(this);
         sharedPreferences = MyApplication.preference;

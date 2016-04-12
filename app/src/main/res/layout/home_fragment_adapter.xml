@@ -46,7 +46,8 @@
             app:fillColor="@android:color/white"
             app:pageColor="@android:color/transparent"
             app:strokeColor="@android:color/white"
-            app:strokeWidth="2dp" />
+            app:strokeWidth="2dp"
+            />
 
     </LinearLayout>
 </RelativeLayout>
