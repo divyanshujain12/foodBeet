@@ -1,0 +1,16 @@
+Index: app/src/main/java/com/elgroup/foodbeat/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/elgroup/foodbeat/MainActivity.java	(revision 297382eb959641288dbae1a06a0e8ec7aa880075)
++++ app/src/main/java/com/elgroup/foodbeat/MainActivity.java	(revision )
+@@ -6,7 +6,7 @@
+ public class MainActivity extends AppCompatActivity {
+ 
+ 
+-    int i,k;
++   d
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
