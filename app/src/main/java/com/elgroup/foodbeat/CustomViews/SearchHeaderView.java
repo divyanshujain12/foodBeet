@@ -22,7 +22,7 @@ public class SearchHeaderView extends RelativeLayout implements View.OnClickList
     EditText edtSearch;
     Toolbar toolbar;
     Context context;
-
+    final String xmlns = "http://schemas.android.com/apk/res-auto";
     public SearchHeaderView(Context context, AttributeSet attrs) {
         super(context, attrs);
 

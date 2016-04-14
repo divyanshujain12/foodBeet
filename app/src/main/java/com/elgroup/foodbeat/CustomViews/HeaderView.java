@@ -19,9 +19,12 @@ import com.neopixl.pixlui.components.textview.TextView;
 public class HeaderView extends RelativeLayout implements OnClickListener {
     private TextView txtHeaderName;
     private ImageView locationIV;
+    final String xmlns = "http://schemas.android.com/apk/res-auto";
+    String headerText = "";
 
     public HeaderView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        headerText = attrs.getAttributeValue(xmlns, "headerText");
         InitViews();
     }
 
@@ -31,6 +34,7 @@ public class HeaderView extends RelativeLayout implements OnClickListener {
         View view = layoutInflater.inflate(R.layout.header_view, this);
 
         txtHeaderName = (TextView) view.findViewById(R.id.txtHeaderName);
+        txtHeaderName.setText(headerText);
         locationIV = (ImageView) view.findViewById(R.id.locationIV);
         locationIV.setOnClickListener(this);
     }
