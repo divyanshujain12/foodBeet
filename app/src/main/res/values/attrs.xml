@@ -43,7 +43,4 @@
     <declare-styleable name="HeaderView">
         <attr name="headerText" format="string" />
     </declare-styleable>
-    <declare-styleable name="SearchHeaderView">
-        <attr name="headerText" format="string" />
-    </declare-styleable>
 </resources>

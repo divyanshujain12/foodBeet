@@ -15,6 +15,11 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/thirty_dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_icon" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -26,10 +31,11 @@
         <ImageView
             android:id="@+id/locationIV"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/thirty_dp"
+            android:layout_height="@dimen/fourty_dp"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
             android:clickable="true"
+            android:padding="@dimen/five_dp"
             android:onClick="ShowLocationsOnMap"
             android:src="@drawable/location" />
     </RelativeLayout>

@@ -42,6 +42,11 @@
     <string name="have_a_promo_code">Have a promo code or gift card?</string>
     <string name="apply">APPLY</string>
     <string name="edit">Edit</string>
+    <string name="buyer">Buyer</string>
+    <string name="seller">Seller</string>
+    <string name="delivery_boy">Delivery Boy</string>
+    <string name="labor">Labor</string>
+    <string name="i_am">I\'m A</string>
 
 
     <!--Dummy Data-->
