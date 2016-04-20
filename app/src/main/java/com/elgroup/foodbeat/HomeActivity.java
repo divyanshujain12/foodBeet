@@ -22,6 +22,7 @@ public class HomeActivity extends BaseActivity {
     private Toolbar toolbar;
     static SimpleSideDrawer slide_me;
     View view;
+    int i;
 
     @SuppressWarnings("deprecation")
     @Override
