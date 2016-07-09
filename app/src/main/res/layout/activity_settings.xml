@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:id="@+id/txtHeaderName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="SETTINGS"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/twenty_sp"
+                pixlui:typeface="OpenSans-ExtraBold.ttf" />
+
+            <ImageView
+                android:id="@+id/locationIV"
+                android:layout_width="@dimen/thirty_six_dp"
+                android:layout_height="@dimen/thirty_six_dp"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+        <com.neopixl.pixlui.components.textview.TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Country"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            />
+
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="USA"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                />
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Language"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="English"
+                android:textColor="@android:color/darker_gray"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Location"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.5"
+               android:src="@drawable/messagecirclesmall"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="About Us"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Terms of use"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Info and Policies"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Currencies"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Rate the app"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="personal Settings"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black">
+
+        </View>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <com.neopixl.pixlui.components.textview.TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Connect with us"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/fbcirclesmall"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/fbcirclesmall"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/fbcirclesmall"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/messagecirclesmall"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/messagecirclesmall"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

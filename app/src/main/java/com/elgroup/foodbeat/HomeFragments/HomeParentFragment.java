@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +11,6 @@ import android.view.ViewGroup;
 
 import com.elgroup.foodbeat.Adapters.ViewPagerAdapter;
 import com.elgroup.foodbeat.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Lenovo on 22-03-2016.
@@ -46,6 +41,7 @@ public class HomeParentFragment extends Fragment {
     }
 
     private void ConfigViewPager() {
+
         viewPagerAdapter = new ViewPagerAdapter(getChildFragmentManager());
         viewPagerAdapter.addFragment(new HomeFragment(), getString(R.string.home));
         viewPagerAdapter.addFragment(new DailySalesFragment(), getString(R.string.daily_sales));

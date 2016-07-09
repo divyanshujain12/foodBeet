@@ -1,5 +1,6 @@
 package com.elgroup.foodbeat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,10 +8,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 
 import com.elgroup.foodbeat.BasketFragments.BasketParentFragment;
 import com.elgroup.foodbeat.HomeFragments.HomeParentFragment;
 import com.elgroup.foodbeat.ProfileFragments.ProfileParentFragment;
+import com.elgroup.foodbeat.Utils.ImageLoading;
 import com.navdrawer.SimpleSideDrawer;
 
 /**
@@ -23,6 +26,9 @@ public class HomeActivity extends BaseActivity {
     static SimpleSideDrawer slide_me;
     View view;
     int i;
+    public static ImageLoading imageLoading;
+    ImageView settings, cart, logout, home, profile;
+
 
     @SuppressWarnings("deprecation")
     @Override
@@ -31,7 +37,7 @@ public class HomeActivity extends BaseActivity {
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
-
+        imageLoading  = new ImageLoading(this);
         InitViews();
 
     }
@@ -42,6 +48,17 @@ public class HomeActivity extends BaseActivity {
         setSupportActionBar(toolbar);*/
         slide_me = new SimpleSideDrawer(this);
         view = slide_me.setLeftBehindContentView(R.layout.left_menu);
+        settings = (ImageView) view.findViewById(R.id.settings_button);
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(i);
+            }
+        });
+
         fragmentManager = getSupportFragmentManager();
         updateFragment(new HomeParentFragment());
 

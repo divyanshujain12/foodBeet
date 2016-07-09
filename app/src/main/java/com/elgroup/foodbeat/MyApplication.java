@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.os.PowerManager;
 import android.text.TextUtils;
 import android.util.LruCache;
 
@@ -102,6 +103,21 @@ public class MyApplication extends Application {
 
     public ImageLoader getImageLoader() {
         return mImageLoader;
+    }
+
+    private static PowerManager.WakeLock wakeLock;
+    public static void acquireWakeLock(Context context) {
+        if (wakeLock != null) wakeLock.release();
+        PowerManager pm = (PowerManager)
+                context.getSystemService(Context.POWER_SERVICE);
+        wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK |
+                PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                PowerManager.ON_AFTER_RELEASE, "WakeLock");
+        wakeLock.acquire();
+    }
+
+    public static  void releaseWakeLock() {
+        if (wakeLock != null) wakeLock.release(); wakeLock = null;
     }
 }
 

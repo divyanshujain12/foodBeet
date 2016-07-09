@@ -1,5 +1,6 @@
 package com.elgroup.foodbeat;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -62,9 +63,23 @@ public class SplashActivity extends BaseActivity implements Animation.AnimationL
 
     @Override
     public void onAnimationEnd(Animation animation) {
+
+        String status = sharedPreferences.getString("loggedIn","");
+        if(status.equals("yes")) {
+
+            Intent i = new Intent(SplashActivity.this, HomeActivity.class);
+            startActivity(i);
+            finish();
+        }
+        else{
+
         ActionLL.setVisibility(View.VISIBLE);
         ActionLL.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_animation));
     }
+    }
+
+
+
 
     @Override
     public void onAnimationRepeat(Animation animation) {

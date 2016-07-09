@@ -2,17 +2,13 @@ package com.elgroup.foodbeat.Utils;
 
 import android.content.Context;
 import android.os.Handler;
-
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.elgroup.foodbeat.CustomDialog.CustomCardleDialog;
 import com.elgroup.foodbeat.MyApplication;
-
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.HashMap;
 
 /**
@@ -21,13 +17,9 @@ import java.util.HashMap;
 public class CallWebService {
 
     private static Context context = null;
-
     private static CallWebService instance = null;
-
     private static CustomProgressDialog progressDialog = null;
-
     private static CustomCardleDialog customCardleDialog = null;
-
 
     public static CallWebService getInstance(Context context, boolean showProgressBar) {
         instance.context = context;
@@ -55,7 +47,7 @@ public class CallWebService {
             public void onResponse(final JSONObject response) {
 
                 try {
-                    if (response.getString(Constants.SUCCESS).equals("1")) {
+                    if (response.getString(Constants.ERROR).equals("0")) {
                         if (customCardleDialog != null) {
                             customCardleDialog.Success();
 
@@ -127,4 +119,86 @@ public class CallWebService {
         MyApplication.getInstance(context).addToRequestQueue(request);
     }
 
+
+    public void hitJSONObjectVolleyWebService1(int requestType, String url, HashMap<String, String> json, final CallBackInterface callBackinerface) {
+
+//        if (customCardleDialog != null)
+//            customCardleDialog.show();
+
+        JsonObjectRequest request = new JsonObjectRequest(requestType, url, json == null ? null : (new JSONObject(json)), new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(final JSONObject response) {
+
+                try {
+                    if (response.getString(Constants.ERROR).equals("0")) {
+                        if (customCardleDialog != null) {
+                            customCardleDialog.Success();
+
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    callBackinerface.onJsonObjectSuccess(response);
+                                    customCardleDialog.dismiss();
+                                }
+                            }, 2000);
+                        } else
+                            callBackinerface.onJsonObjectSuccess(response);
+                    } else {
+                        if (customCardleDialog != null) {
+                            customCardleDialog.Fail(response.optString(Constants.MESSAGE));
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    callBackinerface.onFailure(response.optString(Constants.MESSAGE));
+                                    customCardleDialog.dismiss();
+                                }
+                            }, 2000);
+                        } else
+                            callBackinerface.onFailure(response.optString(Constants.MESSAGE));
+                    }
+                } catch (final JSONException e) {
+                    if (customCardleDialog != null) {
+                        customCardleDialog.Fail(e.getMessage());
+
+                        Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                callBackinerface.onFailure(e.getMessage());
+                                customCardleDialog.dismiss();
+                            }
+                        }, 2000);
+                    } else
+                        callBackinerface.onFailure(e.getMessage());
+
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(final VolleyError error) {
+                if (customCardleDialog != null) {
+                    customCardleDialog.Fail(error.getMessage());
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            callBackinerface.onFailure(error.getMessage());
+                            customCardleDialog.dismiss();
+                        }
+                    }, 2000);
+                } else
+                    callBackinerface.onFailure(error.getMessage());
+
+
+            }
+        });
+
+        MyApplication.getInstance(context).addToRequestQueue(request);
+    }
 }

@@ -56,5 +56,6 @@
     <string name="pic4">http://www.desibucket.com/db2/01/15725/15725.jpg</string>
     <string name="pic5">http://www.desibucket.com/db2/01/15719/15719.jpg</string>
     <string name="pic6">http://www.desibucket.com/db2/01/15693/15693.jpg</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 
 </resources>

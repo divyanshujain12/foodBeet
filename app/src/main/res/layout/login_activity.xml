@@ -26,6 +26,7 @@
             <com.neopixl.pixlui.components.edittext.EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/userNametxt"
                 android:layout_marginTop="@dimen/thirty_dp"
                 android:background="@drawable/white_rounded_corners"
                 android:gravity="center"
@@ -42,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/five_dp"
+                android:id="@+id/passwordtxt"
                 android:background="@drawable/white_rounded_corners"
                 android:gravity="center"
                 android:hint="@string/password"
@@ -56,7 +58,7 @@
         </LinearLayout>
     </LinearLayout>
     <com.neopixl.pixlui.components.textview.TextView
-        android:id="@+id/txtLogin"
+        android:id="@+id/txtSignin"
         android:layout_width="match_parent"
         android:layout_height="@dimen/seventy_dp"
         android:layout_alignParentBottom="true"

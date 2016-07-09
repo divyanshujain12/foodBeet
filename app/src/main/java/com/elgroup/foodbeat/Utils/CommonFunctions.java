@@ -107,6 +107,7 @@ public class CommonFunctions {
         return true;
     }
     public boolean compareOldPassword(EditText inputPassword, TextInputLayout inputLayoutPassword,String oldPass) {
+
         if (!inputPassword.getText().toString().trim().contentEquals(oldPass)) {
             inputLayoutPassword.setError(((Activity) context).getString(R.string.err_wrong_pass));
             requestFocus(inputPassword);

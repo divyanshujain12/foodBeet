@@ -18,19 +18,19 @@ import java.util.ArrayList;
 /**
  * Created by Lenovo on 28-03-2016.
  */
-public class HomeItemViewPagerAdapter extends PagerAdapter {
+public class SaleItemViewPagerAdapter extends PagerAdapter {
 
     Context mContext;
     LayoutInflater mLayoutInflater;
     ArrayList<String> images;
-    // ImageLoading imageLoading;
+    //ImageLoading imageLoading;
     FragmentManager fragmentManager;
 
-    public HomeItemViewPagerAdapter(Context context, ArrayList<String> eventsModels) {
+    public SaleItemViewPagerAdapter(Context context, ArrayList<String> eventsModels) {
         mContext = context;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.images = eventsModels;
-     //   imageLoading = new ImageLoading(mContext);
+       // imageLoading = new ImageLoading(mContext);
     }
 
     @Override
@@ -45,11 +45,11 @@ public class HomeItemViewPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View itemView = mLayoutInflater.inflate(R.layout.home_item_view_pager_adapter, container, false);
 
+        View itemView = mLayoutInflater.inflate(R.layout.sale_item_view_pager_adapter, container, false);
         ImageView itemImg = (ImageView) itemView.findViewById(R.id.itemImg);
         NewtonCradleLoading cradleView = (NewtonCradleLoading) itemView.findViewById(R.id.cradleView);
-        HomeActivity.imageLoading.LoadImage(images.get(position), itemImg, cradleView);
+       HomeActivity.imageLoading.LoadImage(images.get(position), itemImg, null);
         container.addView(itemView);
 
         return itemView;

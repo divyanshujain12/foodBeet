@@ -1,11 +1,10 @@
 package com.elgroup.foodbeat.Models;
 
+
 import java.util.ArrayList;
 
-/**
- * Created by Lenovo on 28-03-2016.
- */
-public class HomeFragmentModel {
+
+public class SaleFragmentModel {
     String id;
     String categoryId;
     String featured;
